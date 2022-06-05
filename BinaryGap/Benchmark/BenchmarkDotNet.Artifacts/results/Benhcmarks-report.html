@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benhcmarks-20220605-045840</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1706 (21H2)
+Intel Core i7-7700K CPU 4.20GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=6.0.300
+  [Host]     : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
+  DefaultJob : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>   N</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th><th>Gen 0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>String</td><td>0</td><td>10.442 ns</td><td>0.0546 ns</td><td>0.0456 ns</td><td>3.31</td><td>0.03</td><td>0.0115</td><td>48 B</td>
+</tr><tr><td>Binary</td><td>0</td><td>3.156 ns</td><td>0.0307 ns</td><td>0.0272 ns</td><td>1.00</td><td>0.00</td><td>0.0057</td><td>24 B</td>
+</tr><tr><td>String</td><td>1041</td><td>84.955 ns</td><td>0.1328 ns</td><td>0.1109 ns</td><td>7.81</td><td>0.04</td><td>0.0172</td><td>72 B</td>
+</tr><tr><td>Binary</td><td>1041</td><td>10.874 ns</td><td>0.0763 ns</td><td>0.0637 ns</td><td>1.00</td><td>0.00</td><td>0.0057</td><td>24 B</td>
+</tr><tr><td>String</td><td>2147483646</td><td>256.634 ns</td><td>0.3516 ns</td><td>0.3117 ns</td><td>5.63</td><td>0.02</td><td>0.0267</td><td>112 B</td>
+</tr><tr><td>Binary</td><td>2147483646</td><td>45.554 ns</td><td>0.1608 ns</td><td>0.1426 ns</td><td>1.00</td><td>0.00</td><td>0.0057</td><td>24 B</td>
+</tr></tbody></table>
+</body>
+</html>
